@@ -43,13 +43,6 @@ public class BroadcastDevice {
         }
     }
 
-//    public String getNPMSId(Integer multicastId) {
-//        Multicast multicast = mapMulticast.get(multicastId);
-//        Optional<Device> npms = multicast.getDevices().stream().filter(c -> c.getType().equals("2")).findFirst();
-//        Device device = npms.orElseGet(() -> new Device().setId(""));
-//        return device.getId();
-//    }
-
     public String getZone2String(String multicastId, List<Integer> zones) {
         Multicast multicast = mapMulticast.get(multicastId);
         Optional<Device> dcs = multicast.getDevices().stream().filter(c -> c.getType().equals("1")).findFirst();
