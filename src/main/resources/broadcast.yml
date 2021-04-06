@@ -1,0 +1,23 @@
+broadcast-device:
+  nicIP: 192.168.2.101
+  multicastIP: 225.0.0.1
+  nodeID: 9500
+  audioStreamFormat: 0
+  # multicast 对应一套设备（也可以粗略理解为一个dcs）
+  multicasts:
+    - id: 1
+      enable: true
+      devices:
+        - {id: 1,type: 1,ip: 192.168.2.200,desc: DCS3000}
+        - {id: 5000,type: 2,ip: 192.168.2.201,desc: NPMS5000}
+      zones:
+        - {id: 1,enable: true}
+  trains:
+    - {id: 900,type: 9,ip: 192.168.2.101,desc: TRAIN900}
+
+broadcast-files:
+  audioFiles:
+    - {id: 1,desc: 火灾疏散, path: ./test441.wav}
+    - {id: 2,desc: 地震疏散, path: }
+    - {id: 3,desc: 空袭疏散, path: }
+
